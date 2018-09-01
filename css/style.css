@@ -13,6 +13,31 @@ body {
   padding: 20px;
 }
 
+.heading-secondary {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, rgb(0, 114, 207), rgb(0, 64, 116));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+}
+
+/* UTILITIES */
+.u-center-text {
+  text-align: center;
+}
+
+.u-margin-bottom-2 {
+  margin-bottom: 2rem;
+}
+
+.u-margin-top-2 {
+  margin-top: 2rem;
+}
+
 /* NAVIGATION */
 .navigation__checkbox {
   display: none;
@@ -150,6 +175,8 @@ body {
   transform: rotate(-135deg);
 }
 
+
+/* HEADER */
 .header {
   height: 150px;
   background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
@@ -173,19 +200,6 @@ body {
   text-transform: lowercase;
 }
 
-/* .section {
-  position: relative;
-  margin-top: 5px;
-  background-color: rgba(128, 128, 128, 0.13);
-  clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
-}
-
-.video-box {
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-
 /* GRID LAYOUT */
 .row {
   max-width: 114rem;
@@ -194,7 +208,7 @@ body {
 }
 
 .row:not(:last-child) {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .row::after {
@@ -204,7 +218,6 @@ body {
 }
 
 .row [class^="col-"] {
-  background-color: orangered;
   float: left;
 }
 
@@ -234,4 +247,6 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
+  padding: 10rem 0;
+  margin-top: calc(-1 * (150px * 0.2));
 }
