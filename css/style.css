@@ -1,7 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -11,18 +15,52 @@ body {
   line-height: 1.7;  
   color: #777;
   padding: 20px;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+p:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 1.4rem;
+  margin-top: 20rem;
+  line-height: 8rem;
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
 }
 
 .heading-secondary {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, rgb(0, 114, 207), rgb(0, 64, 116));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: 0.2rem;
+}
+
+.heading-tertiary {
+  font-size: 2rem;
 }
 
 /* UTILITIES */
@@ -30,11 +68,15 @@ body {
   text-align: center;
 }
 
-.u-margin-bottom-2 {
+.u-margin-bottom-small {
   margin-bottom: 2rem;
 }
 
-.u-margin-top-2 {
+.u-margin-bottom-medium {
+  margin-bottom: 4rem;
+}
+
+.u-margin-top-small {
   margin-top: 2rem;
 }
 
@@ -45,12 +87,12 @@ body {
 
 .navigation__button {
   background-color: white;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50%;
   position: fixed;
-  top: 3rem;
-  right: 3rem;
+  top: 6rem;
+  right: 6rem;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -58,16 +100,16 @@ body {
 }
 
 .navigation__background {
-  height: 3rem;
-  width: 3rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 3.25rem;
-  right: 3.25rem;
+  top: 6.5rem;
+  right: 6.5rem;
   background-image: radial-gradient(rgba(1, 82, 148), rgb(1, 39, 70));
   z-index: 1000;
 
-  transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
 .navigation__nav {
@@ -80,7 +122,7 @@ body {
   opacity: 0;
   width: 0;
   overflow: hidden;
-  transition: all 0.8s;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .navigation__list {
@@ -99,7 +141,7 @@ body {
 
 .navigation__link:link, .navigation__link:visited { 
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 300; 
   padding: 1rem 2rem;
   color: white;
@@ -128,11 +170,11 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 1.8rem;
+  margin-top: 3.5rem;
 }
 
 .navigation__icon, .navigation__icon::before, .navigation__icon::after { 
-  width: 1.8rem;
+  width: 3rem;
   height: 2px;
   background-color: rgb(87, 87, 87);
   display: inline-block;
@@ -146,19 +188,19 @@ body {
 }
 
 .navigation__icon::before {
-  top: -0.5rem;
+  top: -0.8rem;
 }
 
 .navigation__icon::after {
-  top: 0.5rem;
+  top: 0.8rem;
 }
 
 .navigation__button:hover .navigation__icon::before{
-  top: -0.6rem;
+  top: -1rem;
 }
 
 .navigation__button:hover .navigation__icon::after{
-  top: 0.6rem;
+  top: 1rem;
 }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
@@ -178,24 +220,32 @@ body {
 
 /* HEADER */
 .header {
-  height: 150px;
+  height: 85vh;
   background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .logo-box {
   position: absolute;
-  top: 20px;
-  left: 30px;
+  top: 3rem;
+  left: 4rem;
 }
 
 .logo {
   font-family: "Dosis", sans-serif;
   font-weight: 600;
-  font-size: 35px;
+  font-size: 4rem;
   color: rgb(255, 255, 255);
   text-transform: lowercase;
 }
@@ -203,7 +253,7 @@ body {
 /* GRID LAYOUT */
 .row {
   max-width: 114rem;
-  background-color: #eee;
+  /* background-color: #eee; */
   margin: 0 auto;
 }
 
@@ -245,8 +295,51 @@ body {
   width: calc(2 * ((100% - (3 * 4rem)) / 4) + 4rem);
 }
 
-.section-about {
+.section-cleantech {
   background-color: #f7f7f7;
-  padding: 10rem 0;
-  margin-top: calc(-1 * (150px * 0.2));
+  padding: 14rem 0;
+  margin-top: calc(-15vh);
+}
+
+.section-team {
+  padding: 10rem 5rem;
+  background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
+  background-size: cover;
+  transform: skewY(-4deg);
+  margin-top: -7rem;
+}
+
+.section-team > * {
+  transform: skewY(4deg);
+}
+
+.team-member {
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.team-member__name {
+  font-size: 2.2rem;
+  color: #003f73;
+  text-transform: uppercase;
+}
+
+.team-member__credentials {
+  color: #003f73;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.team-member__role {
+  color: #003f73;
+  font-size: 1.5rem;
+}
+
+.headshot__photo {
+  width: 80%;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.4);;
+  border-radius: 2px;
 }
