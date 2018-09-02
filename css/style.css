@@ -301,6 +301,35 @@ h2 {
   margin-top: calc(-15vh);
 }
 
+.modal__launch {
+  position: relative;
+  display: inline-block;
+}
+
+.modal__launch-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.modal__launch-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__launch-button img {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+  opacity: 0.6;
+}
+
+.play-button {
+  color: red;
+}
+
 .section-team {
   padding: 10rem 5rem;
   background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
