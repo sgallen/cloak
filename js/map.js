@@ -6,6 +6,11 @@
       // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
       var mapOptions = {
           zoom: 15,
+          disableDefaultUI: true,
+          scrollwheel: false,
+          scaleControl: false,
+          draggable: false,
+          mapTypeControl: false,
           center: new google.maps.LatLng(43.472285, -80.544858), // New York
           styles: [
             {

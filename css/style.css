@@ -5,8 +5,12 @@
 }
 
 html {
+  /* 1em = 16px */
+  /* Set 1rem = 10px; 10px/16px = 62.5% */
   font-size: 62.5%;
+
 }
+
 
 body {
   font-family: "Lato", sans-serif;
@@ -47,6 +51,7 @@ p:not(:last-child) {
 }
 
 .heading-primary-sub {
+  font-size: 3rem;
   font-weight: 300;
 }
 
@@ -318,7 +323,7 @@ h2 {
 }
 
 .section-cleantech {
-  padding: 10rem 5rem;
+  padding: 10rem 0;
   background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
   background-size: cover;
   transform: skewY(-4deg);
@@ -531,4 +536,108 @@ h2 {
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+/* MEDIA QUERIES */
+/* 
+  450px: 450px/16px = 28.125em
+  600px: 600px/16px = 37.5em
+  900px: 900px/16px = 56.25em
+  1200px: 1200px/16px = 75em
+  1800px: 1800px/16px = 112.5em
+*/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .navigation__button {
+    top: 3rem;
+    right: 4rem;
+  }
+
+  .navigation__background {
+    top: 3.5rem;
+    right: 4.5rem;
+  }
+
+  .row {
+    max-width: 105rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading-primary-main {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+
+  .row [class^="col-"] {
+    width: 100% !important;
+    padding: 0 2rem;
+  }
+
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+
+  .section-tech {
+    padding: 14rem 0;
+  }
+
+  [class^="ti-"] {
+    margin-right: 2rem;
+    line-height: 3.5rem;
+    font-size: 3rem;
+  }
+
+  [class$="details-list-item"] {
+    font-size: 2rem;
+  }
+
+  .footer__list, .footer__copy {
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 28.125em) {
+  .heading-primary-main {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .heading-primary-sub {
+    font-size: 2.1rem;
+  }
+}
+
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
