@@ -324,11 +324,13 @@ h2 {
   margin: 0 auto;
   width: 75%;
   opacity: 0.6;
+  transition: width 0.3s ease;
 }
 
-.play-button {
-  color: red;
+.modal__launch-button:hover img {
+  width: 80%;
 }
+
 
 .section-team {
   padding: 10rem 5rem;
