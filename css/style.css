@@ -20,6 +20,7 @@ body {
 
 p {
   font-size: 1.6rem;
+  text-align: justify;
 }
 
 p:not(:last-child) {
@@ -33,7 +34,7 @@ p:not(:last-child) {
   margin-bottom: 6rem;
 }
 
-.heading-primary--main {
+.heading-primary-main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
@@ -45,7 +46,7 @@ p:not(:last-child) {
   animation-timing-function: ease-out;
 }
 
-.heading-primary--sub {
+.heading-primary-sub {
   font-weight: 300;
 }
 
@@ -299,10 +300,34 @@ h2 {
   width: calc(2 * ((100% - (3 * 4rem)) / 4) + 4rem);
 }
 
-.section-cleantech {
+.section-tech {
   background-color: #f7f7f7;
   padding: 18rem 0;
   margin-top: calc(-15vh);
+}
+
+.section-tech__info-details-list-item {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  list-style: none;
+}
+
+.section-tech__info-details-list-item [class^="ti-"] {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.section-cleantech {
+  padding: 10rem 5rem;
+  background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
+  background-size: cover;
+  transform: skewY(-4deg);
+  margin-top: -7rem;
+  color: white;
+}
+
+.section-cleantech > * {
+  transform: skewY(4deg);
 }
 
 .modal__launch {
@@ -336,17 +361,10 @@ h2 {
   width: 80%;
 }
 
-
 .section-team {
-  padding: 10rem 5rem;
-  background-image: linear-gradient(to right bottom, rgba(1, 82, 148, 0.95), rgba(0, 0, 0, 0.9)), url(../img/graphene.jpg);
-  background-size: cover;
-  transform: skewY(-4deg);
-  margin-top: -7rem;
-}
-
-.section-team > * {
-  transform: skewY(4deg);
+  background-color: #f7f7f7;
+  padding: 18rem 0 10rem;
+  margin-top: calc(-15vh);
 }
 
 .team-member {
@@ -382,7 +400,6 @@ h2 {
 
 /* CONTACT */
 .section-contact {
-  background-color: #f7f7f7;
   padding-top: 18rem;
   margin-top: calc(-15vh);
 }
