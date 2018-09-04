@@ -598,6 +598,11 @@ h2 {
     letter-spacing: 1rem;
   }
 
+  .heading-primary-sub {
+    display: block;
+    line-height: 4rem;
+  }
+
   .heading-tertiary {
     font-size: 2.25rem;
   }
